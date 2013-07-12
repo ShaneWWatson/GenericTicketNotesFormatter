@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Ticket Notes Processor</title>
+<link rel="stylesheet" href="css/blueprint/screen.css" type="text/css"
+	media="screen, projection">
+<link rel="stylesheet" href="css/blueprint/print.css" type="text/css"
+	media="print">
+<!--[if lt IE 8]>
+  <link rel="stylesheet" href="css/blueprint/ie.css" type="text/css" media="screen, projection">
+<![endif]-->
+</code>
+</pre>
+<script type="text/javascript" src="FormProcessing.js"></script>
+</head>
+
+<body>
+	<div class="container span-12" id="selections">
+	<p>Enter a brief description of the issue:<input type="text" id="EnteredSummary"></p>
+	<p>Please enter the description before making any selections.</p>
+		<p class="large">
+			What type of issue: <select id="TicketType"
+				onchange="unhide('TicketType')">
+				<option value="Blank"></option>
+				<option value="Option1">Technical</option>
+				<option value="Option2">Telecom</option>
+			</select>
+		</p>
+		<p id="Option1" class="hide">
+		What OS: <select id="OSType" onchange="unhide('OSType')">
+                <option value="Blank"></option>
+                <option value="OptionA1">Windows XP</option>
+                <option value="OptionB1">Windows Vista</option>
+                <option value="OptionC1">Windows 7</option>
+                <option value="OptionD1">OS X</option>
+            </select>
+		</p>
+	</div>
+	<div class="container span-12" id="output">
+	<p>Summary (autofill):<textarea readonly class="textarea" id="Summary"></textarea></p>
+	<p>Type your notes here:<textarea class="textarea" id="Notes"></textarea></p>
+	</div>
+</body>
+
+</html>
